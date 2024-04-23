@@ -1,0 +1,23 @@
+.feedback-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background: rgb(219, 210, 230);
+    width: 800px;
+    margin: auto;
+  
+}
+.button-control {
+    width: 100px;  
+
+}
+
+.feedback-wrapper > p {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(55, 47, 112);
+
+
+  }
+
