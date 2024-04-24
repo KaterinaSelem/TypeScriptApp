@@ -1,5 +1,5 @@
 import "./styles.css";
-import Button from "../Button/Button";
+import Button from "components/Button/Button";
 import { useState } from "react";
 
 function Counter(){
@@ -9,7 +9,7 @@ function Counter(){
     setCount((prevValue) => prevValue - 1);
   };
 
-  const onPlus = ():void => {
+  const onPlus = (): void => {
     setCount((prevValue) => prevValue + 1);
   };
 
