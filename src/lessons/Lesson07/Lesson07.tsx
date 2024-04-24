@@ -1,4 +1,6 @@
+import { useState } from "react";
 import "./stules.css"
+import Counter from "components/Counter/Counter";
 
 function Lesson07() {
     type CustomArrayType<T = string> = T[];
@@ -67,7 +69,19 @@ enum WeathersCode {
   };
   console.log(decode(WeathersCode.FC));
 
-return <div>Lesson07</div>
+
+  const [count, setCount] = useState<number>(0);
+
+  const onMinus = (): void => {
+    setCount((prevValue) => prevValue - 1);
+  };
+
+  const onPlus = (): void => {
+    setCount((prevValue) => prevValue + 1);
+  };
+  return <div><Counter countValue={count} onMinusClick={onMinus} onPlusClick={onPlus} /></div>
+
+// return <div>Lesson07</div>
   
 }
 export default Lesson07;
