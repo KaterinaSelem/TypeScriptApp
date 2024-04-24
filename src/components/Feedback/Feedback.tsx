@@ -4,18 +4,18 @@ import "./style.css";
 import Button from "../Button/Button";
 
 function Feedback() {
-  const [like, setLikes] = useState(0);
-  const [dislike, setDisLikes] = useState(0);
+  const [like, setLikes] = useState<number>(0);
+  const [dislike, setDisLikes] = useState<number>(0);
 
-  const onLike = () => {
+  const onLike = ():void => {
     setLikes((prevValue) => prevValue + 1);
   };
 
-  const onDisLike = () => {
+  const onDisLike = ():void => {
     setDisLikes((prevValue) => prevValue + 1);
   };
 
-  const onReset = () => {
+  const onReset = ():void => {
     setLikes(0);
     setDisLikes(0);
   };
