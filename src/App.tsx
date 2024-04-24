@@ -1,5 +1,6 @@
-import Feedback from "components/Feedback/Feedback";
+
 import "./App.css";
+import Homework07 from "homeworks/Homework07/Homework07";
 //Lessons
 // import Lesson06 from "./lessons/lesson06/Lesson06";
 // import Lesson07 from "./lessons/Lesson07/Lesson07";
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       {/* <Lesson06 /> */}
       {/* <Lesson07/> */}
-      <Feedback/>
+      <Homework07/>
     </div>
   );
 }
