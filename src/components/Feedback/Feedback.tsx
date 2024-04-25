@@ -6,7 +6,7 @@ import { FeedbackProps } from "./types";
 
 
 
-function Feedback({like, dislike, addLike, addDislike, resetResults}: FeedbackProps) {
+function Feedback({like = 0, dislike = 0, addLike, addDislike, resetResults}: FeedbackProps) {
   return (
     <div className="feedback-container">
       <div className="feedback-result-container">
