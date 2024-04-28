@@ -27,6 +27,7 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  align-items: center;
 }
 `;
 
