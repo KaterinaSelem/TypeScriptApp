@@ -1,26 +1,27 @@
 import styled from "@emotion/styled";
 
-// .products-list-wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 30px;
-//   font-size: 40px;
-//   background-color: bisque;
-//   font-family: Arial, Helvetica, sans-serif;
-//   padding: 30px;
-//   flex: 1;
-// }
+const ProductListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 40px;
+  background-color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px;
+  flex: 1;
+`
 
-// .list-entry {
-//   display: flex;
-//   gap: 20px;
-// }
+const ListEntery = styled.div`
+  display: flex;
+  gap: 20px;
+`
 
-// .list-entry > p {
-//   min-width: 150px;
-// }
-// .products-list {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 20px;
-// }
+const ListTytle = styled.h4`
+  min-width: 150px;
+`
+
+const ListProduckt = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`

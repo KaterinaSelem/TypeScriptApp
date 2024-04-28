@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Button from "components/Button/Button";
-import "./styles.ts";
+import {ProductListWrapper, ListTytle, ListEntery, ListProduckt} from "./styles.ts";
 import { products } from "./data";
 
 function ProductsList() {
@@ -26,16 +26,18 @@ function ProductsList() {
     console.log(searchedEl);
     console.log(chosenProducts);
   };
+}
 
   return (
-    <div className="products-list-wrapper">
-      <h4>Products List:</h4>
-      <div className="products-list">{productsArray}</div>
+    <ProductListWrapper>
+      <ListTytle>Products List:</ListTytle>
+      <ListProduckt>{productsArray}</ListProduckt>
 
-      <h4>Selected Products:</h4>
-      <div className="selected-products"></div>
-    </div>
+      <ListTytle>Selected Products:</ListTytle>
+      <ListProduckt></ListProduckt>
+    </ProductListWrapper>
   );
-}
+
+
 
 export default ProductsList;
