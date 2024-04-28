@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Button from "components/Button/Button";
-import "./styles.css";
+import "./styles.ts";
 import { products } from "./data";
 
 function ProductsList() {

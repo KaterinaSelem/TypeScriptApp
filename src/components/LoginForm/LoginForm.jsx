@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.ts";
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
 
