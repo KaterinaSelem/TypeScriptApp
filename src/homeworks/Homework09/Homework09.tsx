@@ -39,11 +39,11 @@ function Homework09() {
             <Input
                 label="Выговориться"
                 value={input1Value}
-                onInputChange={handleInput1Change} name={"Первая жалоба"} type={""} placeholder={"Давай, жалуйся на жизнь"}            />
+                onInputChange={handleInput1Change} name={"firstComplain"} type={""} placeholder={"Давай, жалуйся на жизнь"}            />
             <Input
                 label="И еще выговориться"
                 value={input2Value}
-                onInputChange={handleInput2Change} name={"Вторая жалоба"} type={""} placeholder={"И еще немного"}            />
+                onInputChange={handleInput2Change} name={"secondComplain"} type={""} placeholder={"И еще немного"}            />
 
             <Button name="Жмак!" onButtonClick={handleButtonClick} />
 
