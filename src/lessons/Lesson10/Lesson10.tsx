@@ -21,7 +21,7 @@ function Lesson10() {
           response: result
         });
       } else {
-        setFacts(prevFacts => [...prevFacts, result.fact])
+        setFacts(previousFacts => [...previousFacts, result.fact])
       }
     } catch (error) {
 
@@ -29,7 +29,7 @@ function Lesson10() {
   }
 
   {facts.map((fact, index) => (
-    <ResultField key={index}>{fact}</ResultField>
+    <ResultField key={index}>{fact}</ResultField>  // вот так придумал чат и мне понравилось
   ))}
 
   const buttonDeleteClick = () => {
