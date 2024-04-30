@@ -1,19 +1,21 @@
-import { ButtonWrap, Lesson10Component, ResultField } from './styles';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ButtonWrap, FactsField, Lesson10Component, ResultField } from './styles';
+import { useEffect, useState } from 'react';
+
 
 import Button from 'components/Button/Button';
+import { v4 } from 'uuid';
+import Spinner from 'components/Spinner/Spinner';
 
 function Lesson10() {
-  const [outputValue, setOutputValue] = useState<string>('');
-  const [facts, setFacts] = useState<string[]>([]);
 
-  const onChangeValue = (event: ChangeEvent<HTMLInputElement>) => {
-    setOutputValue(event.target.value);
-  };
+  const [catFacts, setFacts] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState<Boolean>(false);
+
 
   const getFact = async () => {
     try {
-      const response = await fetch("https://catfact.ninja/fact")
+      setIsLoading(true);
+      const response = await fetch("https://catfact.ninja/fact");
       const result = await response.json();
 
       if (!response.ok) {
@@ -24,20 +26,21 @@ function Lesson10() {
         setFacts(previousFacts => [...previousFacts, result.fact])
       }
     } catch (error) {
-
+             console.log("error!");
+    }finally{
+      setIsLoading(false);
     }
   }
 
-  {facts.map((fact, index) => (
-    <ResultField key={index}>{fact}</ResultField>  // вот так придумал чат и мне понравилось
-  ))}
+  const catFactsElem = catFacts.map((catFact: string) => {
+    return <FactsField key={v4()}>{catFact}</FactsField>  
+  })
 
   const buttonDeleteClick = () => {
     setFacts([]); 
   };
 
   useEffect(() => {
-    console.log('Mounting');
     getFact();
   }, []);
 
@@ -46,11 +49,11 @@ function Lesson10() {
   return (
     <Lesson10Component>
       <ButtonWrap>
-        <Button name='get more info' onButtonClick={getFact}></Button>
-        <Button name='delete' onButtonClick={buttonDeleteClick}></Button>
+        <Button name='GET MORE INFO' onButtonClick={getFact}></Button>
+        <Button name='DELETE' onButtonClick={buttonDeleteClick} disabled={!!catFacts.length}></Button>
       </ButtonWrap>
-
-      <ResultField>{facts}</ResultField>
+      {isLoading ? <Spinner/> : 
+      <ResultField>{catFacts}</ResultField>}
     </Lesson10Component>
   );
 }

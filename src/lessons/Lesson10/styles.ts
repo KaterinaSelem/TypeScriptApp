@@ -15,13 +15,16 @@ export const ButtonWrap = styled.div`
  gap: 35px;
 `
 
-export const ResultField = styled.output`
- width: 350px;
- height: 700px;
- border: 2px solid #425a7d;
- padding: 10px;
- font-size: 24px;
- border-radius: 4px;
+export const ResultField = styled.div`
+display: flex;
+flex-direction: column;
+gap: 60px;
+max-width: 450px;
  max-height: 700px;
   overflow-y: auto;
+  padding: 40px;
+  background-color: #BDD8EB;
+  font-size: 26px;
 `
+
+export const FactsField = styled.div``
