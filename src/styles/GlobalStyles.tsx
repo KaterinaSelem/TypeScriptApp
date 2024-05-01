@@ -3,6 +3,7 @@ import {Global, css} from "@emotion/react";
 const globalStyles = css`
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body,
@@ -27,6 +28,7 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  align-items: center;
 }
 `;
 
