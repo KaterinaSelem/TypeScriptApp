@@ -1,56 +1,52 @@
-import { ChangeEvent, useEffect, useState } from "react";
-import Button from "./Button/Button";
-import Input from "./Input/Input";
+import { Homework09Wrapper, ResultWrapper, ResultsBlock } from './Styles';
+import { ChangeEvent, useState } from 'react';
 
-import { Homework09Wrapper, Result } from "./styles";
+import Input from 'components/Input/Input';
+import Button from 'components/Button/Button';
+
 
 function Homework09() {
-    const [input1Value, setInput1Value] = useState<string>('');
-    const [input2Value, setInput2Value] = useState<string>('');
-    const [resultValue, setResultValue] = useState<string>(''); // Стейт для хранения результата
+    const [firstComplain, setFirstComplain] = useState<string>('');
+    const [SecondComplain, setSecondComplain] = useState<string>('');
+    const [isShowREsult , setIsShowREsult] = useState<boolean>(false);
 
-    const handleInput1Change = (event: ChangeEvent<HTMLInputElement>) => {
-        setInput1Value(event.target.value);
-    };
+    const onFirstComplainInput = (event: ChangeEvent<HTMLInputElement>) : void => {
+        setFirstComplain(event.target.value)
+    }
 
-    const handleInput2Change = (event: ChangeEvent<HTMLInputElement>) => {
-        setInput2Value(event.target.value);
-    };
+    const onSecondComplainInput = (event: ChangeEvent<HTMLInputElement>) : void => {
+        setSecondComplain(event.target.value)
+    }
 
-    const handleButtonClick = () => {
-        // Обновляем результат после нажатия на кнопку
-        setResultValue(`${input1Value} ${input2Value}`);
-    };
+    const onShowResult = () => {
+        // setIsShowREsult(true)
+        setIsShowREsult(!isShowREsult);//меняет состояние на противоположное тому что храниться в state при каждом клике
+    }
 
-    useEffect(()=>{
-        console.log("Update");
-      }, [input2Value] );
-    
-      useEffect(()=>{
-        console.log("Update");
-      }, [input1Value] );
-    
+  return (
+    <Homework09Wrapper>
+      <Input
+        label='Выговориться'
+        onInputChange={onFirstComplainInput}
+        name={'firstComplain'}
+        type={''}
+        placeholder={'Давай, жалуйся на жизнь'}
+      />
+      <Input
+        label='И еще выговориться'
+        onInputChange={onSecondComplainInput}
+        name={'secondComplain'}
+        type={''}
+        placeholder={'И еще немного'}
+      />
+      <Button name='Show Notes'onButtonClick={onShowResult}/>
+      <ResultsBlock isShowREsult = {isShowREsult}>
+        <ResultWrapper>{firstComplain}</ResultWrapper>
+        <ResultWrapper>{SecondComplain}</ResultWrapper>
 
-
-  
-
-    return (
-        <Homework09Wrapper>
-            <Input
-                label="Выговориться"
-                value={input1Value}
-                onInputChange={handleInput1Change} name={"firstComplain"} type={""} placeholder={"Давай, жалуйся на жизнь"}            />
-            <Input
-                label="И еще выговориться"
-                value={input2Value}
-                onInputChange={handleInput2Change} name={"secondComplain"} type={""} placeholder={"И еще немного"}            />
-
-            <Button name="Жмак!" onButtonClick={handleButtonClick} />
-
-            <Result>{resultValue}</Result> {/* Выводим результат */}
-        </Homework09Wrapper>
-    );
+      </ResultsBlock>
+    </Homework09Wrapper>
+  );
 }
 
 export default Homework09;
-

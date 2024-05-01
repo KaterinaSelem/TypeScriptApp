@@ -3,6 +3,7 @@ import {Global, css} from "@emotion/react";
 const globalStyles = css`
 * {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body,
