@@ -1,76 +1,58 @@
 import { ChangeEvent, useEffect, useState } from 'react';
-import {
-  InputExample,
-  Lesson09Component,
-  Result
-} from './styles';
+import { InputExample, Lesson09Component, Result } from './styles';
 
 function Lesson09() {
   const [inputValue, setInputValue] = useState<string>('');
-  const [inputValue2, setInputValue2] = useState<string>('');
-  const [activity, setActivity] = useState<string>('');
-
+  const [quote, setQuote] = useState<string>('');
 
   const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value)
-  }
-
-  const onChangeInput2 = (event: ChangeEvent<HTMLInputElement>) => {
-    setInputValue2(event.target.value)
-  }
+    setInputValue(event.target.value);
+  };
 
   const getActivity = async () => {
     try {
-      const response = await fetch('https://www.boredapi.com/api/activity')
-      const result = await response.json();
-      console.log(result.activity);
-
-      if (!response.ok) {
+      const responce = await fetch(
+        'https://api.breakingbadquotes.xyz/v1/quotes'
+      );
+      const result = await responce.json();
+      console.log(result[0].quote);
+      if (!responce.ok) {
         throw Object.assign(new Error('API Error'), {
-          response: result
+          responce: result,
         });
       } else {
-        setActivity(result.activity)
+        setQuote(result[0].quote);
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   // getActivity();
-  // Вызов функции callback при создании компонента. Пустой массив завсимостей
+
   useEffect(() => {
     console.log('Mounting');
     getActivity();
   }, []);
 
-  // Вызов функции callback при обновлении компонента.  Массив завсимостей не пустой
   useEffect(() => {
-    if (!!activity) {
+    console.log('Update');
+    if (quote) {
       getActivity();
-      console.log('Updating');
     }
-  }, [inputValue, inputValue2]);
-
-  // Вызов функции callback при размонтировании компонента. 
-  //Массив завсимостей пустой, внутри callback функции возвращается другая функция
-  useEffect(() => {
-    return () => {
-      console.log('Unmounting');
-    }
-  }, []);
-
-  // console.log('render');
+  }, [inputValue]);
 
   return (
     <Lesson09Component>
-      <InputExample name='example' placeholder='example text' onChange={onChangeInput} />
-      <InputExample name='example2' placeholder='example text2' onChange={onChangeInput2} />
+      <InputExample
+        name='example'
+        placeholder='example text'
+        onChange={onChangeInput}
+      />
       <Result>{inputValue}</Result>
-      <Result>{inputValue2}</Result>
-      <Result>{activity}</Result>
+      <Result>{quote}</Result>
     </Lesson09Component>
-  )
+  );
 }
 
-export default Lesson09
+export default Lesson09;
