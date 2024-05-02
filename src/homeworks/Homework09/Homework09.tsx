@@ -1,4 +1,4 @@
-import { Homework09Wrapper, ResultWrapper, ResultsBlock } from './Styles';
+import { Homework09Wrapper, ResultWrapper, ResultsBlock } from './styles';
 import { ChangeEvent, useState } from 'react';
 
 import Input from 'components/Input/Input';

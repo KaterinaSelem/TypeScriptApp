@@ -15,10 +15,8 @@ function LoginForm() {
     },
   });
 
-  console.log(formik);
-
-  return (
-    <LoginFormComponent onSubmit ={formik.handleSubmit}>
+  return <LoginFormComponent //onSubmit ={formik.handleSubmit}
+  >
       <LoginName>Login form</LoginName>
       <LoginInputContainer>
         <Input
@@ -40,7 +38,7 @@ function LoginForm() {
       </LoginInputContainer>
       <Button type='submit' name='Login' />
     </LoginFormComponent>
-  );
+
 }
 
 export default LoginForm;
