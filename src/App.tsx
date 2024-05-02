@@ -1,3 +1,4 @@
+import Layout from "components/Layout/Layout";
 import Homework11 from "homeworks/Homework11/Homework11";
 import GlobalStyles from "styles/GlobalStyles";
 
@@ -21,6 +22,7 @@ function App() {
    
     <>
        <GlobalStyles/>
+       <Layout/>
       {/* <Lesson06 /> */}
       {/* <Lesson07/> */}
       {/* <Homework07/> */}
