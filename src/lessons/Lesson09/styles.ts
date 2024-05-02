@@ -19,4 +19,4 @@ border:  2px solid blue;
 
 export const Result = styled.p`
 font-size: 40px;
-`;
+`

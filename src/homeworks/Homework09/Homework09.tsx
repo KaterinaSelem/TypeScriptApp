@@ -26,6 +26,7 @@ function Homework09() {
   return (
     <Homework09Wrapper>
       <Input
+      value={firstComplain}
         label='Выговориться'
         onInputChange={onFirstComplainInput}
         name={'firstComplain'}
@@ -33,6 +34,7 @@ function Homework09() {
         placeholder={'Давай, жалуйся на жизнь'}
       />
       <Input
+      value={SecondComplain}
         label='И еще выговориться'
         onInputChange={onSecondComplainInput}
         name={'secondComplain'}

@@ -25,7 +25,6 @@ export const InputComponent = styled.input`
     color: #6f6f6f;
   }
 `
-
 // export const Lesson09Component = styled.div`
 //  display: flex;
 //  flex-direction: column;

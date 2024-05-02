@@ -1,6 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import { InputExample, Lesson09Component, Result } from './styles';
 
+
 function Lesson09() {
   const [inputValue, setInputValue] = useState<string>('');
   const [quote, setQuote] = useState<string>('');
