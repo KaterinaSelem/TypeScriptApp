@@ -52,6 +52,7 @@ function EmployeeForm() {
         label='Name'
         onInputChange={formik.handleChange}
         value={formik.values[EMPLOYEE_FIELD_NAMES.NAME]}
+        error={formik.values[EMPLOYEE_FIELD_NAMES.NAME]}
       />
       <Input
         name={EMPLOYEE_FIELD_NAMES.SURNAME}
@@ -59,6 +60,7 @@ function EmployeeForm() {
         label='Surname'
         onInputChange={formik.handleChange}
         value={formik.values[EMPLOYEE_FIELD_NAMES.SURNAME]}
+        error={formik.values[EMPLOYEE_FIELD_NAMES.SURNAME]}
       />
       <Input
         name={EMPLOYEE_FIELD_NAMES.AGE}
@@ -66,6 +68,7 @@ function EmployeeForm() {
         label='Age'
         onInputChange={formik.handleChange}
         value={formik.values[EMPLOYEE_FIELD_NAMES.AGE]}
+        error={formik.values[EMPLOYEE_FIELD_NAMES.AGE]}
       />
       <Input
         name={EMPLOYEE_FIELD_NAMES.POSITION}
