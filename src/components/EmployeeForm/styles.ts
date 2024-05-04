@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const EmployeeFormComponent = styled.div`
+export const EmployeeFormComponent = styled.form`
 display: flex;
   flex-direction: column;
   gap: 30px;
