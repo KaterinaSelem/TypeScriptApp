@@ -5,3 +5,12 @@ export interface EmployeeFormValues {
   position: string;
   agreement: boolean;
 }
+
+
+export enum EMPLOYEE_FIELD_NAMES {
+  NAME = 'name',
+  SURNAME = 'surname',
+  AGE = 'age',
+  POSITION = 'position',
+  AGREEMENT = 'agreement',
+}

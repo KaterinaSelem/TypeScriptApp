@@ -32,7 +32,7 @@ function LoginForm() {
   });
 
   return (
-    <LoginFormComponent //onSubmit={formik.handleSubmit}
+    <LoginFormComponent onSubmit={formik.handleSubmit}
     >
       <LoginName>Login form</LoginName>
       <LoginInputContainer>

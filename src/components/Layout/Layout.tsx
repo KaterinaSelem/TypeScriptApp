@@ -1,13 +1,38 @@
-import { Footer, Header, LayoutComponent, Main } from "./styles"
+import {
+  Footer,
+  FooterLogoContainer,
+  Header,
+  HeaderLogo,
+  HeaderLogoContainer,
+  LayoutComponent,
+  Main,
+  NavContainer,
+  StyledNavLink,
+} from './styles';
+import { LayoutProps } from './types';
 
-function Layout() {
+function Layout({children}: LayoutProps) {
   return (
     <LayoutComponent>
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
+      <Header>
+        <HeaderLogoContainer>
+          <HeaderLogo />
+          </HeaderLogoContainer>
+          <NavContainer>
+          <StyledNavLink to='/' style = {({isActive})=>({textDecoration: isActive? 'underline' : 'none'})}>Home |</StyledNavLink>
+          <StyledNavLink to='./about' style = {({isActive})=>({textDecoration: isActive? 'underline' : 'none'})}> About |</StyledNavLink>
+          <StyledNavLink to='/users' style = {({isActive})=>({textDecoration: isActive? 'underline' : 'none'})}> Users</StyledNavLink>
+          </NavContainer>
+        
+      </Header>
+      <Main>{children}</Main>
+      <Footer>
+        <FooterLogoContainer>
+          <HeaderLogo />
+        </FooterLogoContainer>
+      </Footer>
     </LayoutComponent>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
