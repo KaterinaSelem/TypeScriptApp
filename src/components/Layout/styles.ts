@@ -41,6 +41,9 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 `
 export const Footer = styled.footer`
 display: flex;
