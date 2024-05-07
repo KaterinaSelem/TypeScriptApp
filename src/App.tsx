@@ -6,6 +6,7 @@ import Layout from "components/Layout/Layout";
 import Home from "Pages/Home/Home";
 import About from "Pages/About/About";
 import Users from "Pages/Users/Users";
+import Clients from "Pages/OurClients/Clients";
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/users' element={<Users />} />
+          <Route path='/clients' element={<Clients />} />
           <Route path='*' element='Page not found!' />
 
         </Routes>
