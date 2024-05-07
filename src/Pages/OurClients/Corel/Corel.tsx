@@ -1,10 +1,16 @@
-import { corelText } from "./corelText";
-import { ClientsAreaComponent } from "./styles";
+import { corelText } from './corelText';
+import { ClientsAreaComponent, TytleClient } from './styles';
+import { StyledLink } from '../Adobe/styles';
 
 function Corel() {
-    return <>
-        <ClientsAreaComponent>{corelText}</ClientsAreaComponent>
+  return (
+    <> <StyledLink to="/clients"> &lt;&lt; back</StyledLink>
+      <ClientsAreaComponent>
+        <TytleClient>About Corel Corporation</TytleClient>
+        {corelText}
+      </ClientsAreaComponent>
     </>
-  }
-  
-  export default Corel;
+  );
+}
+
+export default Corel;

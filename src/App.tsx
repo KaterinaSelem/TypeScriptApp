@@ -8,6 +8,10 @@ import About from "Pages/About/About";
 import Users from "Pages/Users/Users";
 import Clients from "Pages/OurClients/Clients";
 
+import Adobe from "Pages/OurClients/Adobe/Adobe";
+import Corel from "Pages/OurClients/Corel/Corel";
+import GIMP from "Pages/OurClients/GIMP/Gimp";
+
 
 
 // import "./App.css";
@@ -40,6 +44,11 @@ function App() {
           <Route path='/clients' element={<Clients />} />
           <Route path='*' element='Page not found!' />
 
+          <Route path="/Adobe" element={<Adobe />} />
+        <Route path="/corel" element={<Corel />} />
+        <Route path="/gimp" element={<GIMP />} />
+
+          
         </Routes>
        {/* <Home />
        <About />
