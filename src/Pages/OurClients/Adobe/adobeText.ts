@@ -1,0 +1,7 @@
+export const adobeText =`
+Changing the world through personalized digital experiences.
+Founded 40 years ago on the simple idea of creating innovative products that change the world, Adobe offers groundbreaking technology that empowers everyone, everywhere to imagine, create, and bring any digital experience to life.
+
+Adobe Systems Incorporated, is an American multinational computer software company incorporated in Delaware[2] and headquartered in San Jose, California. It has historically specialized in software for the creation and publication of a wide range of content, including graphics, photography, illustration, animation, multimedia/video, motion pictures, and print. Its flagship products include Adobe Photoshop image editing software; Adobe Illustrator vector-based illustration software; Adobe Acrobat Reader and the Portable Document Format (PDF); and a host of tools primarily for audio-visual content creation, editing and publishing. Adobe offered a bundled solution of its products named Adobe Creative Suite, which evolved into a subscription software as a service (SaaS) offering named Adobe Creative Cloud.[3] The company also expanded into digital marketing software and in 2021 was considered one of the top global leaders in Customer Experience Management (CXM)
+
+`
