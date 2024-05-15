@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import GlobalStyles from "styles/GlobalStyles";
-import Layout from "components/Layout/Layout";
+// import Layout from "components/Layout/Layout";
 
-import Home from "Pages/Home/Home";
-import About from "Pages/About/About";
-import Users from "Pages/Users/Users";
+// import Home from "Pages/Home/Home";
+// import About from "Pages/About/About";
+// import Users from "Pages/Users/Users";
 
+import Weather from './Pages/Weather/components/Weather'
 
 
 // import "./App.css";
@@ -31,18 +32,18 @@ function App() {
     <BrowserRouter>
     
        <GlobalStyles/>
-       <Layout>
-        <Routes>
-        <Route path='/' element={<Home />} />
+       {/* <Layout>
+        <Routes> */}
+        {/* <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/users' element={<Users />} />
-          <Route path='*' element='Page not found!' />
+          <Route path='*' element='Page not found!' /> */}
 
-        </Routes>
+        {/* </Routes> */}
        {/* <Home />
        <About />
        <Users /> */}
-       </Layout>
+       {/* </Layout> */}
      
       {/* <Lesson06 /> */}
       {/* <Lesson07/> */}
@@ -52,6 +53,8 @@ function App() {
       {/* <Lesson10/> */}
       {/* <Lesson11/> */}
       {/* <Homework11/> */}
+
+      <Weather />
     </BrowserRouter>
   );
 }
